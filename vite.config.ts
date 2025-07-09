@@ -10,4 +10,19 @@ export default defineConfig({
       'mintal-utils': path.resolve(__dirname, 'src'),
     },
   },
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'MintalUtils',
+      fileName: (format) => `index.${format}.js`
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
+    }
+  }
 })
