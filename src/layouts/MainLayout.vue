@@ -15,7 +15,7 @@
           </li>
         </ul>
       </nav>
-      <div class="mt-auto px-4 text-xs text-gray-300">© 2024 mintal-utils</div>
+      <div class="mt-auto px-4 text-xs text-gray-300">© 2025 mintal-utils</div>
     </aside>
     <!-- 内容区 -->
     <main class="flex-1 w-full h-full overflow-y-auto p-0 m-0 bg-gray-50">

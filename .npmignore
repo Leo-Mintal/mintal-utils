@@ -1,0 +1,25 @@
+# 排除源代码目录
+src/
+
+# 排除编辑器目录
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 排除配置文件
+tsconfig*.json
+vite.config.ts
+tailwind.config.js
+postcss.config.js
+
+# 排除开发文件
+*.md
+index.html
+
+# 只保留编译后的文件
+!public/
+!package.json
