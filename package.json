@@ -1,13 +1,21 @@
 {
   "name": "mintal-utils",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leo-Mintal/mintal-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Leo-Mintal/mintal-utils/issues"
+  },
+  "homepage": "https://github.com/Leo-Mintal/mintal-utils#readme",
   "dependencies": {
     "html2canvas": "^1.4.1",
     "moment": "^2.30.1",

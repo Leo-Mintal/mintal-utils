@@ -88,41 +88,41 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MCalcUtil } from 'mintal-utils';
+import { MCalcUtil } from '../utils/MCalcUtil';
 
 const plusA = ref(0.1);
 const plusB = ref(0.2);
 const plusResult = ref('');
 const testPlus = () => {
-  plusResult.value = MCalcUtil.plus(plusA.value, plusB.value);
+  plusResult.value = MCalcUtil.plus(plusA.value, plusB.value).toString();
 };
 
 const minusA = ref(1.5);
 const minusB = ref(0.3);
 const minusResult = ref('');
 const testMinus = () => {
-  minusResult.value = MCalcUtil.minus(minusA.value, minusB.value);
+  minusResult.value = MCalcUtil.minus(minusA.value, minusB.value).toString();
 };
 
 const timesA = ref(2.5);
 const timesB = ref(3);
 const timesResult = ref('');
 const testTimes = () => {
-  timesResult.value = MCalcUtil.times(timesA.value, timesB.value);
+  timesResult.value = MCalcUtil.times(timesA.value, timesB.value).toString();
 };
 
 const divideA = ref(10);
 const divideB = ref(3);
 const divideResult = ref('');
 const testDivide = () => {
-  divideResult.value = MCalcUtil.divide(divideA.value, divideB.value);
+  divideResult.value = MCalcUtil.divide(divideA.value, divideB.value).toString();
 };
 
 const roundA = ref(3.14159);
 const roundB = ref(2);
 const roundResult = ref('');
 const testRound = () => {
-  roundResult.value = MCalcUtil.round(roundA.value, roundB.value);
+  roundResult.value = MCalcUtil.round(roundA.value, roundB.value).toString();
 };
 </script>
 

@@ -176,7 +176,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MStringUtil, MValidateUtil } from 'mintal-utils';
+import { MStringUtil } from '../utils/MStringUtil';
 
 const underlineInput = ref('hello_world');
 const underlineBig = ref(false);

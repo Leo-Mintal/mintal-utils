@@ -143,7 +143,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MValidateUtil } from 'mintal-utils';
+import { MValidateUtil } from '../utils/MValidateUtil';
 
 const emailInput = ref('test@example.com');
 const emailResult = ref('');

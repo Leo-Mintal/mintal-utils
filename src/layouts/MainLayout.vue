@@ -10,7 +10,7 @@
         <ul class="space-y-2">
           <li v-for="route in menuRoutes" :key="route.path">
             <router-link :to="route.path" class="sidebar-link" active-class="sidebar-link-active">
-              {{ route.meta.title }}
+              {{ route.meta?.title }}
             </router-link>
           </li>
         </ul>

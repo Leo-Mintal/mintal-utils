@@ -1,4 +1,3 @@
-
 export class MObjectUtil {
   static diff(object1: any, object2: any): Record<string, any> {
     if (!object1 || MObjectUtil.isEmptyObject(object1) || !object2 || MObjectUtil.isEmptyObject(object2)) {
@@ -38,7 +37,7 @@ export class MObjectUtil {
    */
   static isEmptyObject(obj: any): boolean {
     if (obj == null || obj == undefined || obj == "undefined") return true;
-    for (const key in obj) return false;
+    for (const _ in obj) return false;
     return true;
   }
   static isEmpty(obj: any): boolean {

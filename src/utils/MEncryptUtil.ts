@@ -1,5 +1,3 @@
-import { MStringUtil } from "./MStringUtil";
-
 export class MEncryptUtil {
   /**
    * 计算字符串的MD5值

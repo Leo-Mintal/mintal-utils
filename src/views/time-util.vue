@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MTimeUtil } from 'mintal-utils';
+import { MTimeUtil } from '../utils/MTimeUtil';
 
 const nowResult = ref('');
 const testNow = () => {

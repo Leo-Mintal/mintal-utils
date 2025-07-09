@@ -87,7 +87,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MArrayUtil } from 'mintal-utils';
+import { MArrayUtil } from '../utils/MArrayUtil';
 
 const arr1 = ref('1,2,3');
 const arr2 = ref('2,3,4');

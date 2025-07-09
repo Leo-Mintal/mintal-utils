@@ -59,7 +59,7 @@ export class MTimeUtil {
     this.dateType(type);
     this.dateFormat(format);
     if (MStringUtil.isBlank(time as string)) {
-      time = moment();
+      time = moment().toDate();
     }
     let times;
     if (startDay === "firstDay") {
@@ -97,7 +97,7 @@ export class MTimeUtil {
     this.dateType(type);
     this.dateFormat(format);
     if (MStringUtil.isBlank(time as string)) {
-      time = moment();
+      time = moment().toDate();
     }
     if (parseInt(data as string)) {
       return moment(time).add(data, type as any).format(format);

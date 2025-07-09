@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MEncryptUtil } from 'mintal-utils';
+import { MEncryptUtil } from '../utils/MEncryptUtil';
 
 const md5Input = ref('hello world');
 const md5Result = ref('');

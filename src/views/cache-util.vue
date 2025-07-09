@@ -63,7 +63,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MCacheUtil } from 'mintal-utils';
+import { MCacheUtil } from '../utils/MCacheUtil';
 
 const cacheKey = ref('test-user');
 const cacheValue = ref('{"name":"test","age":25}');
