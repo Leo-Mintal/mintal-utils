@@ -114,5 +114,3 @@ export class MObjectUtil {
   }
   // ... 省略部分方法，可根据需要继续补充 ...
 }
-
-export default MObjectUtil;
