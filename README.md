@@ -2,6 +2,9 @@
 
 基于 Vue 3 + TypeScript + Vite 的高质量工具函数库，适用于现代前端项目。原始代码由 Vue2 工具库 [liao_modules](https://www.npmjs.com/package/liao_modules) 升级迁移而来，现已全面适配 Vue3 生态。
 
+[![npm version](https://img.shields.io/npm/v/mintal-utils)](https://www.npmjs.com/package/mintal-utils)
+[![npm downloads](https://img.shields.io/npm/dm/mintal-utils.svg)](https://www.npmjs.com/package/mintal-utils)
+
 ## 特性
 - 全部源码 TypeScript 编写，类型安全
 - 支持 Vite、Vue3 项目直接引入
@@ -33,6 +36,7 @@ const now = MTimeUtil.getCurrentDate();
 const arr = MArrayUtil.getUnion([1,2],[2,3]);
 const userInfo = MUserInfoService.getSessionUserInfo();
 ```
+
 
 ## API 说明
 
