@@ -10,7 +10,7 @@
         </div>
         <button class="btn" @click="testEmail">校验</button>
         <div class="flex-1">
-          <div class="result">{{ emailResult }}</div>
+          <CodeBlock :code="String(emailResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -25,7 +25,7 @@
         </div>
         <button class="btn" @click="testPhone">校验</button>
         <div class="flex-1">
-          <div class="result">{{ phoneResult }}</div>
+          <CodeBlock :code="String(phoneResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -40,7 +40,7 @@
         </div>
         <button class="btn" @click="testURL">校验</button>
         <div class="flex-1">
-          <div class="result">{{ urlResult }}</div>
+          <CodeBlock :code="String(urlResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -55,7 +55,7 @@
         </div>
         <button class="btn" @click="testIDCard">校验</button>
         <div class="flex-1">
-          <div class="result">{{ idCardResult }}</div>
+          <CodeBlock :code="String(idCardResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -70,7 +70,7 @@
         </div>
         <button class="btn" @click="testChinese">校验</button>
         <div class="flex-1">
-          <div class="result">{{ chineseResult }}</div>
+          <CodeBlock :code="String(chineseResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -85,7 +85,7 @@
         </div>
         <button class="btn" @click="testNumber">校验</button>
         <div class="flex-1">
-          <div class="result">{{ numberResult }}</div>
+          <CodeBlock :code="String(numberResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -100,7 +100,7 @@
         </div>
         <button class="btn" @click="testIPv4">校验</button>
         <div class="flex-1">
-          <div class="result">{{ ipv4Result }}</div>
+          <CodeBlock :code="String(ipv4Result)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -115,7 +115,7 @@
         </div>
         <button class="btn" @click="testPostal">校验</button>
         <div class="flex-1">
-          <div class="result">{{ postalResult }}</div>
+          <CodeBlock :code="String(postalResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -130,7 +130,7 @@
         </div>
         <button class="btn" @click="testPlate">校验</button>
         <div class="flex-1">
-          <div class="result">{{ plateResult }}</div>
+          <CodeBlock :code="String(plateResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -143,7 +143,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MValidateUtil } from '../utils/MValidateUtil';
+import CodeBlock from '../components/CodeBlock.vue';
+import MValidateUtil from "../utils/MValidateUtil";
 
 const emailInput = ref('test@example.com');
 const emailResult = ref('');

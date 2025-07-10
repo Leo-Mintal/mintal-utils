@@ -11,7 +11,7 @@
         </div>
         <button class="btn" @click="testIntersection">求交集</button>
         <div class="flex-1">
-          <div class="result">{{ intersectionResult }}</div>
+          <CodeBlock :code="String(intersectionResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -27,7 +27,7 @@
         </div>
         <button class="btn" @click="testUnion">求并集</button>
         <div class="flex-1">
-          <div class="result">{{ unionResult }}</div>
+          <CodeBlock :code="String(unionResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -43,7 +43,7 @@
         </div>
         <button class="btn" @click="testHasOne">判断</button>
         <div class="flex-1">
-          <div class="result">{{ hasOneResult }}</div>
+          <CodeBlock :code="String(hasOneResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -58,7 +58,7 @@
         </div>
         <button class="btn" @click="handleIsEmpty">isEmpty</button>
         <div class="flex-1">
-          <div class="result">{{ isEmptyResult }}</div>
+          <CodeBlock :code="String(isEmptyResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -74,7 +74,7 @@
         </div>
         <button class="btn" @click="handleSplitByProp">splitByProp</button>
         <div class="flex-1">
-          <div class="result">{{ groupResult }}</div>
+          <CodeBlock :code="String(groupResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -88,6 +88,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MArrayUtil } from '../utils/MArrayUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const arr1 = ref('1,2,3');
 const arr2 = ref('2,3,4');

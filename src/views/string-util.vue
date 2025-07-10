@@ -13,7 +13,7 @@
         </div>
         <button class="btn" @click="testUnderline">转换</button>
         <div class="flex-1">
-          <div class="result">{{ underlineResult }}</div>
+          <CodeBlock :code="String(underlineResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -28,7 +28,7 @@
         </div>
         <button class="btn" @click="testBlank">判断</button>
         <div class="flex-1">
-          <div class="result">{{ blankResult }}</div>
+          <CodeBlock :code="String(blankResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -43,7 +43,7 @@
         </div>
         <button class="btn" @click="testRandom">生成</button>
         <div class="flex-1">
-          <div class="result">{{ randomResult }}</div>
+          <CodeBlock :code="String(randomResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -58,7 +58,7 @@
         </div>
         <button class="btn" @click="testBase64">转换</button>
         <div class="flex-1">
-          <div class="result">{{ base64Result }}</div>
+          <CodeBlock :code="String(base64Result)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -73,7 +73,7 @@
         </div>
         <button class="btn" @click="testCamel2Underline">转换</button>
         <div class="flex-1">
-          <div class="result">{{ camel2underlineResult }}</div>
+          <CodeBlock :code="String(camel2underlineResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -88,7 +88,7 @@
         </div>
         <button class="btn" @click="testIsNotBlank">判断</button>
         <div class="flex-1">
-          <div class="result">{{ notBlankResult }}</div>
+          <CodeBlock :code="String(notBlankResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -103,7 +103,7 @@
         </div>
         <button class="btn" @click="testReverse">反转</button>
         <div class="flex-1">
-          <div class="result">{{ reverseResult }}</div>
+          <CodeBlock :code="String(reverseResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -118,7 +118,7 @@
         </div>
         <button class="btn" @click="testRemoveAllSpaces">移除</button>
         <div class="flex-1">
-          <div class="result">{{ removeSpaceResult }}</div>
+          <CodeBlock :code="String(removeSpaceResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -133,7 +133,7 @@
         </div>
         <button class="btn" @click="testHexToBase64">转换</button>
         <div class="flex-1">
-          <div class="result">{{ hexToBase64Result }}</div>
+          <CodeBlock :code="String(hexToBase64Result)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -148,7 +148,7 @@
         </div>
         <button class="btn" @click="testBase64ToBytes">转换</button>
         <div class="flex-1">
-          <div class="result">{{ base64ToBytesResult }}</div>
+          <CodeBlock :code="String(base64ToBytesResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -163,7 +163,7 @@
         </div>
         <button class="btn" @click="testUtf8ToBase64">转换</button>
         <div class="flex-1">
-          <div class="result">{{ utf8ToBase64Result }}</div>
+          <CodeBlock :code="String(utf8ToBase64Result)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -177,6 +177,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MStringUtil } from '../utils/MStringUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const underlineInput = ref('hello_world');
 const underlineBig = ref(false);

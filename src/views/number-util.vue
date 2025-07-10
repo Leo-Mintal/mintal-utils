@@ -9,7 +9,7 @@
         </div>
         <button class="btn" @click="handleToDecimal2">toDecimal2</button>
         <div class="flex-1">
-          <div class="result">{{ decimal2Result }}</div>
+          <CodeBlock :code="String(decimal2Result)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -22,6 +22,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MNumberUtil } from '../utils/MNumberUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const decimal2Num = ref(0);
 const decimal2Result = ref('');

@@ -9,7 +9,7 @@
         </div>
         <button class="btn" @click="handleNum2ChineseNum">num2ChineseNum</button>
         <div class="flex-1">
-          <div class="result">{{ num2ChineseResult }}</div>
+          <CodeBlock :code="String(num2ChineseResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -24,7 +24,7 @@
         </div>
         <button class="btn" @click="handleToDecimalSplit">toDecimalSplit</button>
         <div class="flex-1">
-          <div class="result">{{ decimalSplitResult }}</div>
+          <CodeBlock :code="String(decimalSplitResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -39,7 +39,7 @@
         </div>
         <button class="btn" @click="handleToDecimal">toDecimal</button>
         <div class="flex-1">
-          <div class="result">{{ decimalResult }}</div>
+          <CodeBlock :code="String(decimalResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -52,6 +52,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MMoneyUtil } from '../utils/MMoneyUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const num2ChineseInput = ref('1234.56');
 const num2ChineseResult = ref('');

@@ -13,7 +13,7 @@
         <button class="btn ml-2" @click="getCache">读取</button>
         <button class="btn ml-2" @click="removeCache">删除</button>
         <div class="flex-1">
-          <div class="result">{{ cacheResult }}</div>
+          <CodeBlock :code="String(cacheResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -31,7 +31,7 @@
         <button class="btn ml-2" @click="getLocal">读取</button>
         <button class="btn ml-2" @click="removeLocal">删除</button>
         <div class="flex-1">
-          <div class="result">{{ localResult }}</div>
+          <CodeBlock :code="String(localResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -50,7 +50,7 @@
         <button class="btn ml-2" @click="getCookie">读取</button>
         <button class="btn ml-2" @click="removeCookie">删除</button>
         <div class="flex-1">
-          <div class="result">{{ cookieResult }}</div>
+          <CodeBlock :code="String(cookieResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -64,6 +64,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MCacheUtil } from '../utils/MCacheUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const cacheKey = ref('test-user');
 const cacheValue = ref('{"name":"test","age":25}');

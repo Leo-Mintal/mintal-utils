@@ -10,7 +10,7 @@
         </div>
         <button class="btn" @click="testMD5">加密</button>
         <div class="flex-1">
-          <div class="result">{{ md5Result }}</div>
+          <CodeBlock :code="String(md5Result)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -23,6 +23,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import CodeBlock from '../components/CodeBlock.vue';
 import { MEncryptUtil } from '../utils/MEncryptUtil';
 
 const md5Input = ref('hello world');

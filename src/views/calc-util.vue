@@ -11,7 +11,7 @@
         </div>
         <button class="btn" @click="testPlus">计算</button>
         <div class="flex-1">
-          <div class="result">{{ plusResult }}</div>
+          <CodeBlock :code="String(plusResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -27,7 +27,7 @@
         </div>
         <button class="btn" @click="testMinus">计算</button>
         <div class="flex-1">
-          <div class="result">{{ minusResult }}</div>
+          <CodeBlock :code="String(minusResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -43,7 +43,7 @@
         </div>
         <button class="btn" @click="testTimes">计算</button>
         <div class="flex-1">
-          <div class="result">{{ timesResult }}</div>
+          <CodeBlock :code="String(timesResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -59,7 +59,7 @@
         </div>
         <button class="btn" @click="testDivide">计算</button>
         <div class="flex-1">
-          <div class="result">{{ divideResult }}</div>
+          <CodeBlock :code="String(divideResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -75,7 +75,7 @@
         </div>
         <button class="btn" @click="testRound">计算</button>
         <div class="flex-1">
-          <div class="result">{{ roundResult }}</div>
+          <CodeBlock :code="String(roundResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -89,6 +89,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MCalcUtil } from '../utils/MCalcUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const plusA = ref(0.1);
 const plusB = ref(0.2);

@@ -10,7 +10,7 @@
         </div>
         <button class="btn" @click="handleDiff">diff</button>
         <div class="flex-1">
-          <div class="result">{{ diffResult }}</div>
+          <CodeBlock :code="String(diffResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -25,7 +25,7 @@
         </div>
         <button class="btn" @click="handleEquals">equals</button>
         <div class="flex-1">
-          <div class="result">{{ equalsResult }}</div>
+          <CodeBlock :code="String(equalsResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -39,7 +39,7 @@
         </div>
         <button class="btn" @click="handleDeepClone">deepClone</button>
         <div class="flex-1">
-          <div class="result">{{ deepCloneResult }}</div>
+          <CodeBlock :code="String(deepCloneResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -53,7 +53,7 @@
         </div>
         <button class="btn" @click="handleIsEmptyObject">isEmptyObject</button>
         <div class="flex-1">
-          <div class="result">{{ isEmptyObjectResult }}</div>
+          <CodeBlock :code="String(isEmptyObjectResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -67,7 +67,7 @@
         </div>
         <button class="btn" @click="handleGetType">getTypeByObj</button>
         <div class="flex-1">
-          <div class="result">{{ typeResult }}</div>
+          <CodeBlock :code="String(typeResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -82,7 +82,7 @@
         </div>
         <button class="btn" @click="handleJudgeType">judgeType</button>
         <div class="flex-1">
-          <div class="result">{{ judgeTypeResult }}</div>
+          <CodeBlock :code="String(judgeTypeResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -96,7 +96,7 @@
         </div>
         <button class="btn" @click="handleIsEmpty">isEmpty</button>
         <div class="flex-1">
-          <div class="result">{{ isEmptyResult }}</div>
+          <CodeBlock :code="String(isEmptyResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -110,7 +110,7 @@
         </div>
         <button class="btn" @click="handleIsObject">isObject</button>
         <div class="flex-1">
-          <div class="result">{{ isObjectResult }}</div>
+          <CodeBlock :code="String(isObjectResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -123,6 +123,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MObjectUtil } from '../utils/MObjectUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const diffObj1Str = ref('{"a":1,"b":2}');
 const diffObj2Str = ref('{"a":1,"b":3}');

@@ -9,7 +9,7 @@
         </div>
         <button class="btn" @click="handlePdfbase64ToBlob">base64转Blob</button>
         <div class="flex-1">
-          <div class="result">{{ blobResult }}</div>
+          <CodeBlock :code="String(blobResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -23,7 +23,7 @@
         </div>
         <button class="btn" @click="handleDataStreamCovertPdf">流转PDF</button>
         <div class="flex-1">
-          <div class="result">{{ pdfResult }}</div>
+          <CodeBlock :code="String(pdfResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -33,28 +33,28 @@
       <div class="bg-white/80 rounded-xl p-6 shadow flex flex-col md:flex-row md:items-center gap-4">
         <div class="flex-1 flex flex-col justify-center items-center gap-2">
           <div class="font-semibold">节点转Base64图片 (htmlBase64)</div>
-          <input v-model="selector" class="input" placeholder="#demo" />
+          <input v-model="selector" class="input" placeholder="#logo" />
         </div>
         <button class="btn" @click="handleHtmlBase64">节点转Base64图片</button>
         <div class="flex-1">
-          <div class="result">{{ htmlBase64Result }}</div>
+          <CodeBlock :code="String(htmlBase64Result)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
         <div><span class="font-semibold text-[#055E3A]">参数：</span>selector: string（html选择器）</div>
         <div><span class="font-semibold text-[#055E3A]">返回：</span>base64字符串</div>
       </div>
-      <div id="demo" class="mt-4 p-2 border">示例节点：#demo</div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MFileUtil } from '../utils/MFileUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const blobBase64 = ref('');
 const pdfBase64 = ref('');
-const selector = ref('#demo');
+const selector = ref('#logo');
 const blobResult = ref('');
 const pdfResult = ref('');
 const htmlBase64Result = ref('');

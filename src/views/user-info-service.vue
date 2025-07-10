@@ -9,6 +9,7 @@
         <button class="btn" @click="handleGetSessionUserInfo">获取Session UserInfo</button>
         <div class="flex-1">
           <div class="result">{{ getSessionUserInfoResult }}</div>
+          <CodeBlock :code="String(getSessionUserInfoResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -22,6 +23,7 @@
         <button class="btn" @click="handleRemoveSessionUserInfo">删除Session UserInfo</button>
         <div class="flex-1">
           <div class="result">{{ removeSessionUserInfoResult }}</div>
+          <CodeBlock :code="String(removeSessionUserInfoResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -34,6 +36,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MUserInfoService } from '../utils/MUserInfoService';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const getSessionUserInfoResult = ref('');
 const removeSessionUserInfoResult = ref('');

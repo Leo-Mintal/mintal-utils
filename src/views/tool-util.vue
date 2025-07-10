@@ -11,7 +11,7 @@
         </div>
         <button class="btn" @click="handleAddUrlParam">addUrlParam</button>
         <div class="flex-1">
-          <div class="result">{{ addUrlParamResult }}</div>
+          <CodeBlock :code="String(addUrlParamResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -26,7 +26,7 @@
         </div>
         <button class="btn" @click="handleDelUrlParam">delUrlParam</button>
         <div class="flex-1">
-          <div class="result">{{ delUrlParamResult }}</div>
+          <CodeBlock :code="String(delUrlParamResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -40,7 +40,7 @@
         </div>
         <button class="btn" @click="handleUrlSearch">urlSearch</button>
         <div class="flex-1">
-          <div class="result">{{ urlSearchResult }}</div>
+          <CodeBlock :code="String(urlSearchResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -54,7 +54,7 @@
         </div>
         <button class="btn" @click="handleGetQueryString">getQueryString</button>
         <div class="flex-1">
-          <div class="result">{{ getQueryStringResult }}</div>
+          <CodeBlock :code="String(getQueryStringResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -67,7 +67,7 @@
         </div>
         <button class="btn" @click="handleGetExplorer">getExplorer</button>
         <div class="flex-1">
-          <div class="result">{{ getExplorerResult }}</div>
+          <CodeBlock :code="String(getExplorerResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -80,7 +80,7 @@
         </div>
         <button class="btn" @click="handleGetNowRoute">getNowRoute</button>
         <div class="flex-1">
-          <div class="result">{{ getNowRouteResult }}</div>
+          <CodeBlock :code="String(getNowRouteResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -93,7 +93,7 @@
         </div>
         <button class="btn" @click="handleGetNowHost">getNowHost</button>
         <div class="flex-1">
-          <div class="result">{{ getNowHostResult }}</div>
+          <CodeBlock :code="String(getNowHostResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -106,7 +106,7 @@
         </div>
         <button class="btn" @click="handleGetNowProtocol">getNowProtocol</button>
         <div class="flex-1">
-          <div class="result">{{ getNowProtocolResult }}</div>
+          <CodeBlock :code="String(getNowProtocolResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -120,7 +120,7 @@
         </div>
         <button class="btn" @click="handleIsBlank">isBlank</button>
         <div class="flex-1">
-          <div class="result">{{ isBlankResult }}</div>
+          <CodeBlock :code="String(isBlankResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -134,7 +134,7 @@
         </div>
         <button class="btn" @click="debounceClick">debounce计数</button>
         <div class="flex-1">
-          <div class="result">{{ debounceCount }}</div>
+          <CodeBlock :code="String(debounceCount)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -147,6 +147,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MToolUtil } from '../utils/MToolUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const addUrl = ref('https://example.com?a=1&b=2');
 const addParamName = ref('a');

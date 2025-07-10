@@ -9,7 +9,7 @@
         </div>
         <button class="btn" @click="testNow">获取</button>
         <div class="flex-1">
-          <div class="result">{{ nowResult }}</div>
+          <CodeBlock :code="String(nowResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -24,7 +24,7 @@
         </div>
         <button class="btn" @click="testFormat">格式化</button>
         <div class="flex-1">
-          <div class="result">{{ formatResult }}</div>
+          <CodeBlock :code="String(formatResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -39,7 +39,7 @@
         </div>
         <button class="btn" @click="testFirstDay">获取</button>
         <div class="flex-1">
-          <div class="result">{{ firstDayResult }}</div>
+          <CodeBlock :code="String(firstDayResult)" />
         </div>
       </div>
       <div class="text-xs text-gray-500 mt-2">
@@ -53,6 +53,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MTimeUtil } from '../utils/MTimeUtil';
+import CodeBlock from '../components/CodeBlock.vue';
 
 const nowResult = ref('');
 const testNow = () => {

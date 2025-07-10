@@ -1,8 +1,8 @@
 <template>
   <div class="flex h-screen w-screen bg-white">
     <!-- 侧边栏 -->
-    <aside class="w-60 min-w-48 max-w-xs bg-white border-r border-gray-100 flex flex-col py-6 px-2 shadow-md h-full">
-      <div class="mb-8 px-4">
+    <aside class="w-60 min-w-48 max-w-xs bg-white border-r border-gray-100 flex flex-col py-6 px-2 shadow-md h-full overflow-y-auto">
+      <div id="logo" class="mb-8 px-4">
         <div class="text-2xl font-bold text-primary tracking-wide mb-2">mintal-utils</div>
         <div class="text-xs text-gray-400">工具函数库</div>
       </div>
