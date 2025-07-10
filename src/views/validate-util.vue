@@ -198,16 +198,5 @@ const plateResult = ref('');
 const testPlate = () => {
   plateResult.value = MValidateUtil.isPlateNumber(plateInput.value) ? '是车牌号' : '不是车牌号';
 };
-</script>
 
-<style scoped>
-.input {
-  @apply border rounded px-3 py-2 w-full max-w-xs focus:outline-none focus:ring-2 focus:ring-primary transition bg-white;
-}
-.btn {
-  @apply bg-primary text-white px-6 py-2 rounded-lg font-semibold shadow transition-all duration-200 active:scale-95 hover:bg-primary/90 focus:ring-2 focus:ring-primary;
-}
-.result {
-  @apply bg-gray-100 rounded px-3 py-2 min-h-[2.2em] break-all font-mono text-[#055E3A];
-}
-</style>
+</script>
