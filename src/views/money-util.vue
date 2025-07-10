@@ -7,7 +7,7 @@
           <div class="font-semibold">金额转大写 (num2ChineseNum)</div>
           <input v-model="num2ChineseInput" class="input" placeholder="输入金额" />
         </div>
-        <button class="btn" @click="handleNum2ChineseNum">num2ChineseNum</button>
+        <button class="btn" @click="handleNum2ChineseNum">转换</button>
         <div class="flex-1">
           <CodeBlock :code="String(num2ChineseResult)" />
         </div>
@@ -22,7 +22,7 @@
           <input v-model="decimalSplitInput" class="input" placeholder="输入金额" />
           <input v-model.number="decimalSplitDigits" type="number" class="input w-24" placeholder="保留位数" />
         </div>
-        <button class="btn" @click="handleToDecimalSplit">toDecimalSplit</button>
+        <button class="btn" @click="handleToDecimalSplit">截断</button>
         <div class="flex-1">
           <CodeBlock :code="String(decimalSplitResult)" />
         </div>
@@ -37,7 +37,7 @@
           <input v-model="decimalInput" class="input" placeholder="输入金额" />
           <input v-model.number="decimalDigits" type="number" class="input w-24" placeholder="保留位数" />
         </div>
-        <button class="btn" @click="handleToDecimal">toDecimal</button>
+        <button class="btn" @click="handleToDecimal">转换</button>
         <div class="flex-1">
           <CodeBlock :code="String(decimalResult)" />
         </div>

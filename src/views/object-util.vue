@@ -8,7 +8,7 @@
           <textarea v-model="diffObj1Str" class="input w-full h-20" placeholder="对象1(JSON)" />
           <textarea v-model="diffObj2Str" class="input w-full h-20" placeholder="对象2(JSON)" />
         </div>
-        <button class="btn" @click="handleDiff">diff</button>
+        <button class="btn" @click="handleDiff">是否不同</button>
         <div class="flex-1">
           <CodeBlock :code="String(diffResult)" />
         </div>
@@ -23,7 +23,7 @@
           <textarea v-model="equalsObj1Str" class="input w-full h-20" placeholder="对象1(JSON)" />
           <textarea v-model="equalsObj2Str" class="input w-full h-20" placeholder="对象2(JSON)" />
         </div>
-        <button class="btn" @click="handleEquals">equals</button>
+        <button class="btn" @click="handleEquals">是否相等</button>
         <div class="flex-1">
           <CodeBlock :code="String(equalsResult)" />
         </div>
@@ -37,7 +37,7 @@
           <div class="font-semibold">深拷贝 (deepClone)</div>
           <textarea v-model="deepCloneObjStr" class="input w-full h-20" placeholder="对象1(JSON)" />
         </div>
-        <button class="btn" @click="handleDeepClone">deepClone</button>
+        <button class="btn" @click="handleDeepClone">深拷贝</button>
         <div class="flex-1">
           <CodeBlock :code="String(deepCloneResult)" />
         </div>
@@ -51,7 +51,7 @@
           <div class="font-semibold">是否空对象 (isEmptyObject)</div>
           <textarea v-model="isEmptyObjStr" class="input w-full h-20" placeholder="对象1(JSON)" />
         </div>
-        <button class="btn" @click="handleIsEmptyObject">isEmptyObject</button>
+        <button class="btn" @click="handleIsEmptyObject">是否空对象</button>
         <div class="flex-1">
           <CodeBlock :code="String(isEmptyObjectResult)" />
         </div>
@@ -65,7 +65,7 @@
           <div class="font-semibold">获取类型 (getTypeByObj)</div>
           <input v-model="typeInput" class="input" placeholder="输入任意值，如 123 或 {a:1}" />
         </div>
-        <button class="btn" @click="handleGetType">getTypeByObj</button>
+        <button class="btn" @click="handleGetType">获取类型</button>
         <div class="flex-1">
           <CodeBlock :code="String(typeResult)" />
         </div>
@@ -80,7 +80,7 @@
           <input v-model="judgeInput" class="input" placeholder="输入任意值，如 123 或 {a:1}" />
           <input v-model="judgeTypeInput" class="input" placeholder="类型名，如 number、object、string" />
         </div>
-        <button class="btn" @click="handleJudgeType">judgeType</button>
+        <button class="btn" @click="handleJudgeType">类型判断</button>
         <div class="flex-1">
           <CodeBlock :code="String(judgeTypeResult)" />
         </div>
@@ -94,7 +94,7 @@
           <div class="font-semibold">空判断 (isEmpty)</div>
           <input v-model="isEmptyInput" class="input" placeholder="输入任意值，如 ''、null、{}" />
         </div>
-        <button class="btn" @click="handleIsEmpty">isEmpty</button>
+        <button class="btn" @click="handleIsEmpty">空判断</button>
         <div class="flex-1">
           <CodeBlock :code="String(isEmptyResult)" />
         </div>
@@ -108,7 +108,7 @@
           <div class="font-semibold">对象判断 (isObject)</div>
           <input v-model="isObjectInput" class="input" placeholder="输入任意值，如 {{}}、[]、123" />
         </div>
-        <button class="btn" @click="handleIsObject">isObject</button>
+        <button class="btn" @click="handleIsObject">是否为对象</button>
         <div class="flex-1">
           <CodeBlock :code="String(isObjectResult)" />
         </div>

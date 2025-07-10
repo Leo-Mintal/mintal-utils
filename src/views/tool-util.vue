@@ -9,7 +9,7 @@
           <input v-model="addParamName" class="input w-40" placeholder="参数名" />
           <input v-model="addParamValue" class="input w-40" placeholder="参数值" />
         </div>
-        <button class="btn" @click="handleAddUrlParam">addUrlParam</button>
+        <button class="btn" @click="handleAddUrlParam">添加</button>
         <div class="flex-1">
           <CodeBlock :code="String(addUrlParamResult)" />
         </div>
@@ -24,7 +24,7 @@
           <input v-model="delUrl" class="input w-full" placeholder="URL" />
           <input v-model="delParamName" class="input w-40" placeholder="参数名" />
         </div>
-        <button class="btn" @click="handleDelUrlParam">delUrlParam</button>
+        <button class="btn" @click="handleDelUrlParam">删除</button>
         <div class="flex-1">
           <CodeBlock :code="String(delUrlParamResult)" />
         </div>
@@ -38,7 +38,7 @@
           <div class="font-semibold">URL参数转对象 (urlSearch)</div>
           <input v-model="searchUrl" class="input w-full" placeholder="URL" />
         </div>
-        <button class="btn" @click="handleUrlSearch">urlSearch</button>
+        <button class="btn" @click="handleUrlSearch">转换</button>
         <div class="flex-1">
           <CodeBlock :code="String(urlSearchResult)" />
         </div>
@@ -52,7 +52,7 @@
           <div class="font-semibold">获取URL参数值 (getQueryString)</div>
           <input v-model="queryParamName" class="input w-40" placeholder="参数名" />
         </div>
-        <button class="btn" @click="handleGetQueryString">getQueryString</button>
+        <button class="btn" @click="handleGetQueryString">获取</button>
         <div class="flex-1">
           <CodeBlock :code="String(getQueryStringResult)" />
         </div>
@@ -65,7 +65,7 @@
         <div class="flex-1 flex flex-col justify-center items-center gap-2">
           <div class="font-semibold">获取浏览器类型 (getExplorer)</div>
         </div>
-        <button class="btn" @click="handleGetExplorer">getExplorer</button>
+        <button class="btn" @click="handleGetExplorer">获取</button>
         <div class="flex-1">
           <CodeBlock :code="String(getExplorerResult)" />
         </div>
@@ -78,7 +78,7 @@
         <div class="flex-1 flex flex-col justify-center items-center gap-2">
           <div class="font-semibold">获取当前路由 (getNowRoute)</div>
         </div>
-        <button class="btn" @click="handleGetNowRoute">getNowRoute</button>
+        <button class="btn" @click="handleGetNowRoute">获取</button>
         <div class="flex-1">
           <CodeBlock :code="String(getNowRouteResult)" />
         </div>
@@ -91,7 +91,7 @@
         <div class="flex-1 flex flex-col justify-center items-center gap-2">
           <div class="font-semibold">获取当前Host (getNowHost)</div>
         </div>
-        <button class="btn" @click="handleGetNowHost">getNowHost</button>
+        <button class="btn" @click="handleGetNowHost">获取</button>
         <div class="flex-1">
           <CodeBlock :code="String(getNowHostResult)" />
         </div>
@@ -104,7 +104,7 @@
         <div class="flex-1 flex flex-col justify-center items-center gap-2">
           <div class="font-semibold">获取当前协议 (getNowProtocol)</div>
         </div>
-        <button class="btn" @click="handleGetNowProtocol">getNowProtocol</button>
+        <button class="btn" @click="handleGetNowProtocol">获取</button>
         <div class="flex-1">
           <CodeBlock :code="String(getNowProtocolResult)" />
         </div>
@@ -118,7 +118,7 @@
           <div class="font-semibold">空值判断 (isBlank)</div>
           <input v-model="isBlankInput" class="input" placeholder="输入任意值，如 ''、null、[]、{}" />
         </div>
-        <button class="btn" @click="handleIsBlank">isBlank</button>
+        <button class="btn" @click="handleIsBlank">判断</button>
         <div class="flex-1">
           <CodeBlock :code="String(isBlankResult)" />
         </div>
