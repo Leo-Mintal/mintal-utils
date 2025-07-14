@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "build:types": "tsc -p tsconfig.build.json",
-    "preview": "vite preview",
+    "preview": "vite preview"
   },
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",

@@ -2,6 +2,8 @@
 
 基于 Vue 3 + TypeScript + Vite 的高质量工具函数库，适用于现代前端项目。原始代码由 Vue2 工具库 [liao_modules](https://www.npmjs.com/package/liao_modules) 升级迁移而来，现已全面适配 Vue3 生态。
 
+[English](README_EN.md) | [中文](README.md)
+
 [![npm version](https://img.shields.io/npm/v/mintal-utils)](https://www.npmjs.com/package/mintal-utils)
 [![npm downloads](https://img.shields.io/npm/dm/mintal-utils.svg)](https://www.npmjs.com/package/mintal-utils)
 
@@ -24,6 +26,24 @@ pnpm install mintal-utils
 yarn add mintal-utils
 ```
 
+## 本地运行 Demo
+如需查看完整 Demo 示例，请从 GitHub 拉取源码并在本地运行：
+```
+https://github.com/Leo-Mintal/mintal-utils.git
+
+pnpm install
+
+pnpm dev
+```
+
+或
+
+```bash
+yarn install
+
+yarn dev
+```
+
 ## 使用方法
 
 ### 工具函数/服务类
@@ -36,7 +56,6 @@ const now = MTimeUtil.getCurrentDate();
 const arr = MArrayUtil.getUnion([1,2],[2,3]);
 const userInfo = MUserInfoService.getSessionUserInfo();
 ```
-
 
 ## API 说明
 
